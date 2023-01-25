@@ -1,0 +1,8 @@
+<div *ngIf="repos">
+    <ul *ngFor="let repo of repos">
+        <h3>{{repo.name}}</h3>
+        <p>No of Stars: {{repo.stargazers_count}}</p>
+        <p>Description: {{repo.description}}</p>
+        <a href={{repo.html_url}}>View on github</a>
+    </ul>
+</div>

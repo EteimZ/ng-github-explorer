@@ -1,0 +1,4 @@
+<form [formGroup]="searchForm" (ngSubmit)="navigateToProfile()">
+    <input type="text" formControlName="search" placeholder="Search by username">
+    <button type="submit">Search</button>
+</form>

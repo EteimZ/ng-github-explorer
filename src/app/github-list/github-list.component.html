@@ -1,0 +1,8 @@
+<ul *ngFor="let user of users">
+    <mat-card>
+        <mat-card-content>
+            <button mat-raised-button color="primary" [title]="user.login +  ' profile'" [routerLink]="['/profile', user.login]"> {{user.login}} </button>
+        </mat-card-content>
+    </mat-card>
+    
+</ul> 
