@@ -14,8 +14,10 @@ export class GithubUserDisplayComponent implements OnInit {
   constructor(private githubService: GithubService){}
 
   ngOnInit(){
-    this.githubService.getUser(this.username).subscribe((data) => this.user = data )
-  }
-
-  
+    this.githubService.getUser(this.username).subscribe((data) => {
+      if (data.message == "Not Found" ){
+        console.log("This works")
+      }
+      this.user = data })
+  }  
 }

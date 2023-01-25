@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule } from "@angular/material/card"
 import { MatButtonModule } from "@angular/material/button";
+import {MatListModule} from '@angular/material/list';
+import { GithubNotFoundComponent } from './github-not-found/github-not-found.component'; 
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { MatButtonModule } from "@angular/material/button";
     GithubListComponent,
     GithubUserDisplayComponent,
     GithubReposComponent,
-    GithubCommentComponent
+    GithubCommentComponent,
+    GithubNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { MatButtonModule } from "@angular/material/button";
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule 
+    MatButtonModule,
+    MatListModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

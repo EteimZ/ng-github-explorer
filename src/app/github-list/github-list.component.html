@@ -1,8 +1,9 @@
-<ul *ngFor="let user of users">
-    <mat-card>
-        <mat-card-content>
-            <button mat-raised-button color="primary" [title]="user.login +  ' profile'" [routerLink]="['/profile', user.login]"> {{user.login}} </button>
-        </mat-card-content>
-    </mat-card>
-    
-</ul> 
+<div class="bg-white p-4  ">
+    <ul >
+        <li *ngFor="let user of users" class="cursor-pointer flex items-center py-4 text-lg border rounded mb-4">
+            <img class="w-12 h-12 rounded-full ml-4" [src]="user.avatar_url" alt="User Avatar">
+            <span class="ml-2 flex-1" >{{user.login}}</span>
+            <div class="mr-4 "><button class="bg-blue-500 text-white px-4 py-2 rounded-lg" [title]="user.login +  ' profile'" [routerLink]="['/profile', user.login]">View Profile</button></div>
+        </li>
+    </ul>
+</div>
